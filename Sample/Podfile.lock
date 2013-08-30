@@ -1,0 +1,14 @@
+PODS:
+  - ASBanker (1.0.0)
+
+DEPENDENCIES:
+  - ASBanker (from `https://github.com/AwaraiStudios/ASBanker.git`)
+
+EXTERNAL SOURCES:
+  ASBanker:
+    :git: https://github.com/AwaraiStudios/ASBanker.git
+
+SPEC CHECKSUMS:
+  ASBanker: 8923b0cef2f2c279884c8cf35259de4a25ab2f5f
+
+COCOAPODS: 0.20.1

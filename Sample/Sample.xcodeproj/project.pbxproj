@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FE40502893E45168A1EDC75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1CD6D14240425197640B97 /* libPods.a */; };
 		F45E96C217D0DD2100D9A86B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E96C117D0DD2100D9A86B /* UIKit.framework */; };
 		F45E96C417D0DD2100D9A86B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E96C317D0DD2100D9A86B /* Foundation.framework */; };
 		F45E96C617D0DD2100D9A86B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E96C517D0DD2100D9A86B /* CoreGraphics.framework */; };
@@ -16,8 +17,6 @@
 		F45E96DB17D0DD2100D9A86B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45E96DA17D0DD2100D9A86B /* ViewController.m */; };
 		F45E96DE17D0DD2100D9A86B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45E96DC17D0DD2100D9A86B /* ViewController_iPhone.xib */; };
 		F45E96E117D0DD2100D9A86B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45E96DF17D0DD2100D9A86B /* ViewController_iPad.xib */; };
-		F45E96E917D0DD6000D9A86B /* ASBanker.m in Sources */ = {isa = PBXBuildFile; fileRef = F45E96E817D0DD6000D9A86B /* ASBanker.m */; };
-		F45E96EB17D0DF8000D9A86B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E96EA17D0DF8000D9A86B /* StoreKit.framework */; };
 		F45E96F317D0E50A00D9A86B /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F45E96EC17D0E50900D9A86B /* Default-568h@2x~iphone.png */; };
 		F45E96F417D0E50A00D9A86B /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F45E96ED17D0E50900D9A86B /* Default-Landscape@2x~ipad.png */; };
 		F45E96F517D0E50A00D9A86B /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F45E96EE17D0E50900D9A86B /* Default-Landscape~ipad.png */; };
@@ -28,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018FE6A6D58F475FBA899B4E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DE1CD6D14240425197640B97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45E96BE17D0DD2100D9A86B /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45E96C117D0DD2100D9A86B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F45E96C317D0DD2100D9A86B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,9 +43,6 @@
 		F45E96DA17D0DD2100D9A86B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F45E96DD17D0DD2100D9A86B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		F45E96E017D0DD2100D9A86B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		F45E96E717D0DD6000D9A86B /* ASBanker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASBanker.h; path = ../Source/ASBanker.h; sourceTree = "<group>"; };
-		F45E96E817D0DD6000D9A86B /* ASBanker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASBanker.m; path = ../Source/ASBanker.m; sourceTree = "<group>"; };
-		F45E96EA17D0DF8000D9A86B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F45E96EC17D0E50900D9A86B /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F45E96ED17D0E50900D9A86B /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		F45E96EE17D0E50900D9A86B /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -59,10 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45E96EB17D0DF8000D9A86B /* StoreKit.framework in Frameworks */,
 				F45E96C217D0DD2100D9A86B /* UIKit.framework in Frameworks */,
 				F45E96C417D0DD2100D9A86B /* Foundation.framework in Frameworks */,
 				F45E96C617D0DD2100D9A86B /* CoreGraphics.framework in Frameworks */,
+				6FE40502893E45168A1EDC75 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +70,10 @@
 		F45E96B517D0DD2100D9A86B = {
 			isa = PBXGroup;
 			children = (
-				F45E96EA17D0DF8000D9A86B /* StoreKit.framework */,
-				F45E96E717D0DD6000D9A86B /* ASBanker.h */,
-				F45E96E817D0DD6000D9A86B /* ASBanker.m */,
 				F45E96C717D0DD2100D9A86B /* Sample */,
 				F45E96C017D0DD2100D9A86B /* Frameworks */,
 				F45E96BF17D0DD2100D9A86B /* Products */,
+				018FE6A6D58F475FBA899B4E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +91,7 @@
 				F45E96C117D0DD2100D9A86B /* UIKit.framework */,
 				F45E96C317D0DD2100D9A86B /* Foundation.framework */,
 				F45E96C517D0DD2100D9A86B /* CoreGraphics.framework */,
+				DE1CD6D14240425197640B97 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F45E96E417D0DD2100D9A86B /* Build configuration list for PBXNativeTarget "Sample" */;
 			buildPhases = (
+				5D819C9B44874948BBB6E472 /* Check Pods Manifest.lock */,
 				F45E96BA17D0DD2100D9A86B /* Sources */,
 				F45E96BB17D0DD2100D9A86B /* Frameworks */,
 				F45E96BC17D0DD2100D9A86B /* Resources */,
+				0D3DAADDB009428B8165BB80 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +196,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D3DAADDB009428B8165BB80 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		5D819C9B44874948BBB6E472 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F45E96BA17D0DD2100D9A86B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -205,7 +235,6 @@
 				F45E96CE17D0DD2100D9A86B /* main.m in Sources */,
 				F45E96D217D0DD2100D9A86B /* AppDelegate.m in Sources */,
 				F45E96DB17D0DD2100D9A86B /* ViewController.m in Sources */,
-				F45E96E917D0DD6000D9A86B /* ASBanker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +328,7 @@
 		};
 		F45E96E517D0DD2100D9A86B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 018FE6A6D58F475FBA899B4E /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
@@ -310,6 +340,7 @@
 		};
 		F45E96E617D0DD2100D9A86B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 018FE6A6D58F475FBA899B4E /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
@@ -338,6 +369,7 @@
 				F45E96E617D0DD2100D9A86B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
