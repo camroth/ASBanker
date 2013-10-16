@@ -20,7 +20,7 @@ If you're unfamiliar with CocoaPods there is a great tutorial [here](http://www.
 4. Add the pod `ASBanker` to your [Podfile](https://github.com/CocoaPods/CocoaPods/wiki/A-Podfile).
 
     	platform :ios
-    	pod ASBanker'
+    	pod 'ASBanker'
 
 5. Run `pod install`.
 6. Open your app's `.xcworkspace` file to launch Xcode and start adding In App Purchases!
@@ -35,6 +35,13 @@ If you're unfamiliar with CocoaPods there is a great tutorial [here](http://www.
 **Running the sample project**
 
 Check out the [sample project](https://github.com/AwaraiStudios/ASBanker/tree/master/Sample) included in the repository. Just open the '.xcworkspace' file in the Sample folder and the project should build correctly.
+
+Author(s)
+-------
+
+[Awarai Studios Limited](https://github.com/AwaraiStudios)
+
+[Ross Gibson](https://github.com/Ross-Gibson)
 
 Licence
 -------
