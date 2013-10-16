@@ -3,6 +3,8 @@ ASBanker
 
 Simplifies adding In App Purchases to iOS applications. Create a Banker, set its delegate and pass an array of your In App Purchase products to it, easy! The Banker handles the rest including storing the transactions and handling errors. 
 
+![Alt text](/screenshot.png "ASBanker")
+
 Setup
 -----
 
