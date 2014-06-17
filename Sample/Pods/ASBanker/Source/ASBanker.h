@@ -27,11 +27,16 @@
 
 @interface ASBanker : NSObject <SKPaymentTransactionObserver, SKProductsRequestDelegate>
 
-@property (nonatomic, assign) UIViewController <ASBankerDelegate> *delegate;
+@property (nonatomic, assign) id <ASBankerDelegate> delegate;
 @property (strong, nonatomic) SKProductsRequest *productsRequest;
+@property (nonatomic, strong) NSString *bundleIdentifier;
+@property (nonatomic, strong) NSMutableDictionary *products;
 
+- (id)initWithDelegate:(id <ASBankerDelegate>)delegate;
+- (id)initWithDelegate:(id <ASBankerDelegate>)delegate andBundleIdentifier:(NSString *)bundleIdentifier;
 - (BOOL)canMakePurchases;
 - (void)fetchProducts:(NSArray *)productIdentifiers;
+- (void)fetchProductIdentifiers:(NSArray *)productIdentifiers;
 - (void)failedToConnect;
 - (void)noProductsFound;
 - (void)foundProducts:(NSArray *)products;
@@ -39,6 +44,7 @@
 - (void)purchaseItem:(SKProduct *)product;
 - (void)restorePurchases;
 - (void)provideContent:(SKPaymentTransaction *)paymentTransaction;
+- (NSArray *)arrayOfProducts;
 
 @end
 

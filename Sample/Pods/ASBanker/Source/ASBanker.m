@@ -13,6 +13,21 @@
 	self = [super init];
 	if (self != nil) {
 		[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+		self.products = [@{} mutableCopy];
+		self.bundleIdentifier = @"";
+	}
+	return self;
+}
+
+- (id)initWithDelegate:(id <ASBankerDelegate>)delegate {
+	return [self initWithDelegate:delegate andBundleIdentifier:[[NSBundle mainBundle] bundleIdentifier]];
+}
+
+- (id)initWithDelegate:(id <ASBankerDelegate>)delegate andBundleIdentifier:(NSString *)bundleIdentifier {
+	self = [super init];
+	if (self) {
+		self.delegate = delegate;
+		self.bundleIdentifier = bundleIdentifier;
 	}
 	return self;
 }
@@ -40,6 +55,17 @@
         _productsRequest.delegate = self;
         [_productsRequest start];
     }
+}
+
+- (void)fetchProductIdentifiers:(NSArray *)productIdentifiers {
+	NSMutableArray *idents = [@[] mutableCopy];
+	for (NSString *ident in productIdentifiers) {
+		if (![self.products objectForKey:ident]) {
+			NSString *fullIdentifier = [NSString stringWithFormat:@"%@.%@", self.bundleIdentifier, ident];
+			[idents addObject:fullIdentifier];
+		}
+	}
+	[self fetchProducts:[NSArray arrayWithArray:idents]];
 }
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
@@ -75,8 +101,12 @@
 }
 
 - (void)foundProducts:(NSArray *)products {
+	for (SKProduct *product in products) {
+		[self.products setObject:product forKey:[product productIdentifier]];
+	}
+	
 	if ([self.delegate respondsToSelector:@selector(bankerFoundProducts:)]) {
-		[_delegate performSelector:@selector(bankerFoundProducts:) withObject:products];
+		[_delegate performSelector:@selector(bankerFoundProducts:) withObject:[self arrayOfProducts]];
 	}
 }
 
@@ -108,6 +138,14 @@
     if ([self.delegate respondsToSelector:@selector(bankerProvideContent:)]) {
         [_delegate performSelector:@selector(bankerProvideContent:) withObject:paymentTransaction];
 	}
+}
+
+- (NSArray *)arrayOfProducts {
+	NSMutableArray *array = [@[] mutableCopy];
+	for (NSString *key in [self.products allKeys]) {
+		[array addObject:self.products[key]];
+	}
+	return [NSArray arrayWithArray:array];
 }
 
 - (void)completeTransaction:(SKPaymentTransaction *)transaction {

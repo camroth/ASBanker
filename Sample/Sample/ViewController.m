@@ -18,25 +18,18 @@
 
 @implementation ViewController
 
-#pragma mark - Init
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-	self.banker = [[ASBanker alloc] init];
-	_banker.delegate = self;
-	[_banker fetchProducts:@[@"com.awaraistudios.testapp.upgrade"]]; // This is not a valid product, please change for your own.
+	self.banker = [[ASBanker alloc] initWithDelegate:self andBundleIdentifier:@"com.YourName.AppName"];
+	
+	// this assumes that your products are identified as:
+	// com.YourName.AppName.inAppPurchaseIdentifier1
+	// com.YourName.AppName.inAppPurchaseIdentifier2
+	[self.banker fetchProductIdentifiers:@[@"inAppPurchaseIdentifier1", @"inAppPurchaseIdentifier2"]];
 }
 
 - (void)didReceiveMemoryWarning {
